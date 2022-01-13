@@ -39,10 +39,11 @@ class _HomePageState extends State<HomePage> {
             width: 159,
             child: Row(
               children: [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundColor: Colors.green[300],
+                const CircleAvatar(
+                  backgroundImage: AssetImage('assets/erick.jpg'),
+                  radius: 25,
                 ),
+               
                 SizedBox(
                   width: size.width * 0.01,
                 ),
@@ -59,16 +60,17 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [
+            
             Container(
-              height: 40,
-              width: 40,
+              height: size.height * 0.1,
+              width: size.width * 0.1,
               decoration: BoxDecoration(
                   color: Colors.greenAccent.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(10.0)),
               child: ChangeThemeButtonWidget(),
             ),
-            const SizedBox(
-              width: 5,
+             SizedBox(
+              width: size.width * 0.02,
             )
           ],
         ),
@@ -91,12 +93,15 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const Text('Total investments',
-                            style: TextStyle(
-                                fontFamily: 'Trueno',
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600)),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Text('Total investments',
+                              style: TextStyle(
+                                  fontFamily: 'Trueno',
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600)),
+                        ),
                         const SizedBox(
                           height: 8.0,
                         ),
@@ -116,12 +121,15 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const Text('Monthly savings',
-                            style: TextStyle(
-                                fontFamily: 'Trueno',
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600)),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Text('Monthly savings',
+                              style: TextStyle(
+                                  fontFamily: 'Trueno',
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600)),
+                        ),
                         const SizedBox(
                           height: 8.0,
                         ),
